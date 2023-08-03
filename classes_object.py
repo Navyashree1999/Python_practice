@@ -33,6 +33,29 @@ print(tv.model)
 print(tv.screen_size)
 tv.turn_on()
 tv.turn_off()
+print("\n")
+
+class Employee:
+    emp_id = 2327290
+    name = 'Navya'
+    department = "IT"
+    email = "navyashree@gmail.com"
+    phone_no = 5647834946
+
+    def work_as(self):
+        print(f"{self.name} works as system engineer")
+
+    def leave(self,date):
+        print(f"{self.name} is appling leave on {date}")
+emp = Employee()
+print(emp.emp_id)
+print(emp.name)
+print(emp.email)
+print(emp.phone_no)
+print(emp.department)
+emp.work_as()
+emp.leave(25)
+
 
 
 
