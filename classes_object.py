@@ -67,6 +67,28 @@ pen = Pen()
 print(pen.brand)
 print(pen.colour)
 pen.write()
+print("\n")
+
+
+class Elephant:
+    name = "Airavatha"
+    gender = "Male"
+    weight = 200
+
+    def eat(self):
+        print(f"{self.name} eating food")
+
+    def sleep(self):
+        print(f"{self.name} is sleeping")
+
+
+ele = Elephant()
+print(ele.name)
+print(ele.gender)
+print(ele.weight)
+ele.eat()
+ele.sleep()
+
 
 
 
