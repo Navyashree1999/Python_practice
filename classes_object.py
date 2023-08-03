@@ -55,6 +55,18 @@ print(emp.phone_no)
 print(emp.department)
 emp.work_as()
 emp.leave(25)
+print("\n")
+
+class Pen:
+    brand = "Cello"
+    colour = "blue"
+
+    def write(self):
+        print(f"write using {self.brand} {self.colour} link pen")
+pen = Pen()
+print(pen.brand)
+print(pen.colour)
+pen.write()
 
 
 
