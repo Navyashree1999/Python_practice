@@ -20,3 +20,35 @@ print("\n")
 employee2 = Employee(21, "Divya", "shree", "30k", "developer")
 print(employee2.employee_name())
 print(employee2.employee_details("Divyashree"))
+print("\n")
+
+class Voting:
+    constituency = "Gundlupet"
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def voting(self):
+        return "My name is {},age is {} and vote under {} constituency".format(self.name, self.age, self.constituency)
+
+    @classmethod
+    def my_constituency(cls):
+        return "My Constituency is {}".format(cls.constituency)
+
+    @staticmethod
+    def check_age(age):
+        if age>=18:
+            return True
+        else:
+            return False
+age = int(input("enter age:"))
+name = input("Enter name:")
+if Voting.check_age(age):
+    v1 = Voting(name, age)
+    print(v1.name)
+    print(v1.age)
+    print(v1.voting())
+else:
+    print("Not eligible to vote")
+
+
