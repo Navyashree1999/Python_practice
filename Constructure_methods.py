@@ -81,5 +81,31 @@ stu1 = Student("navya" , 25, "female")
 markslist1 = stu1.calculate_marks()
 print(stu1.student_details()," and my marks list is" ,markslist1)
 print(stu1.student_details(), "and my average marks is ", stu1.avg_marks())
+print("\n")
+
+class Student:
+    marks = []
+    def __init__(self, name):
+        self.name = name
+
+    def student_details(self):
+        count = 6
+        for i in range(count):
+            new_marks = int(input("enter marks:"))
+            self.marks.append(new_marks)
+        percent = (sum(self.marks) / (count * 100)) * 100
+        return percent
+
+    @staticmethod
+    def check_pass_fail(percent):
+        if percent >=35:
+            return 'pass'
+        else:
+            return "fail"
+student = Student("navya")
+percent = student.student_details()
+pass_fail_status = student.check_pass_fail(percent)
+print(student.name, student.marks, pass_fail_status)
+
 
 
