@@ -51,4 +51,35 @@ if Voting.check_age(age):
 else:
     print("Not eligible to vote")
 
+print("\n")
+
+class Student:
+    university = "Mysore"
+    marks = []
+    sum = 0
+    def __init__(self, name, age, gender):
+        self.name = name
+        self.age= age
+        self.gender = gender
+
+    def student_details(self):
+        return "My name is {}, age is {} and studying in {} university".format(self.name, self.age, self.university)
+
+    def calculate_marks(self):
+        count = 3
+        for i in range(count):
+            num = int(input("enter marks:"))
+            self.marks.append(num)
+            self.sum = self.sum + num
+        return self.marks
+
+    def avg_marks(self):
+        avg = self.sum / 3
+        return avg
+
+stu1 = Student("navya" , 25, "female")
+markslist1 = stu1.calculate_marks()
+print(stu1.student_details()," and my marks list is" ,markslist1)
+print(stu1.student_details(), "and my average marks is ", stu1.avg_marks())
+
 
