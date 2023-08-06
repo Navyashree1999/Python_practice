@@ -24,6 +24,16 @@ dog = Dog()
 dog.name = "Charli"
 print(dog.name)
 dog.eat()
+print("\n")
+class Cat(Animal):
+    def eat(self):
+        super().eat()
+        print("I like to drink milk")
+cat = Cat()
+cat.name = "billi"
+print(cat.name)
+cat.eat()
+
 
 
 
