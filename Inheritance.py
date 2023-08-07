@@ -34,6 +34,25 @@ cat.name = "billi"
 print(cat.name)
 cat.eat()
 
+# single level inheritance
+class Polygon:
+    def __init__(self, sides):
+        self.sides = sides
+
+    def perimeter(self):
+        perimeter = sum(self.sides)
+        return perimeter
+class Triangle(Polygon):
+    pass
+
+tri = Triangle([5, 6, 8])
+print("Perimeter of traingle is ",tri.perimeter())
+
+
+
+
+
+
 
 
 
