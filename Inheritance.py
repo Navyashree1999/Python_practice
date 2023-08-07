@@ -47,6 +47,24 @@ class Triangle(Polygon):
 
 tri = Triangle([5, 6, 8])
 print("Perimeter of traingle is ",tri.perimeter())
+print("\n")
+
+class University:
+    def __init__(self, name):
+        self.name = name
+
+class College(University):
+    def __init__(self, name, college_name):
+        super().__init__(name)
+        self.college_name = college_name
+
+class Student(College):
+    def __init__(self, name, college_name, student_name):
+        super().__init__(name, college_name)
+        self.student_name = student_name
+stu = Student("VTU", "Maharaja institute of technology", "Navya")
+print("I am {},studing in {} of {} university".format(stu.student_name, stu.college_name, stu.name))
+
 
 
 
