@@ -75,6 +75,22 @@ class Student(College):
 stu = Student("VTU", "Maharaja institute of technology", "Navya")
 print(stu.get_info())
 
+# Multiple inheritance
+class Mammal:
+    def give_birth(self):
+        print("Giving birth to young ones")
+class FlyingCreature:
+    def fly(self):
+        print("Flying in sky")
+class Bat(Mammal,FlyingCreature):
+    def __init__(self, name):
+        self.name = name
+bat = Bat("Fruitbat")
+print("Bat's name:",bat.name)
+bat.give_birth()
+bat.fly()
+
+
 
 
 
