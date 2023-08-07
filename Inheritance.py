@@ -53,17 +53,28 @@ class University:
     def __init__(self, name):
         self.name = name
 
+    def get_info(self):
+        return "This is {} university".format(self.name)
+
 class College(University):
     def __init__(self, name, college_name):
         super().__init__(name)
         self.college_name = college_name
 
+    def get_info(self):
+        return "This is {} college, part of {} university".format(self.college_name, self.name)
+
 class Student(College):
     def __init__(self, name, college_name, student_name):
         super().__init__(name, college_name)
         self.student_name = student_name
+
+    def get_info(self):
+        return "This is {}, student at {} which is a part of {} university".format(self.student_name, self.college_name, self.name)
+
 stu = Student("VTU", "Maharaja institute of technology", "Navya")
-print("I am {},studing in {} of {} university".format(stu.student_name, stu.college_name, stu.name))
+print(stu.get_info())
+
 
 
 
